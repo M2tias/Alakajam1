@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" width="30" height="30" tilewidth="32" tileheight="32">
  <tileset firstgid="1" source="../../../Resources/Tilesets/tiles.tsx"/>
- <layer name="Tile Layer 1" width="100" height="100">
+ <layer name="Map" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJzt1U0KglAUgNG3KNtAFI0tzHkRrSSa97ODaJ09wcGjzIhQxM7ggBcnFz64Lw8h5MBHh2jb4vg0Xwaw85hNo3U0abCLTvX/rJ43A9h5zKoeZTRrsKh7lMmshx7/RI9hqXrMo31tlXwX0U2P3nuk73kWXt/1ux699nh3r5rulx7d90jvVZtCj85do+UXzgPYGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDfPACnSF6p
+   eJwLZGBgCByhuBWIk/HgdjT+FCrZ6wTEYUBsigWnAvEkqLwJlJ9ERXvDgdgFC3aH2huOxB+1l3x7XYE4HYqDkdihQLyEhvYipysTBsz0tYzO4Ywt3GkVzvhwKBXtnQrEQSTgyVSydxSP4lE8ikfxKB7Fo5gWGAAk/h64
+  </data>
+ </layer>
+ <layer name="Objects" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztzgENADAIwDD8uwUFN/EECK2BLYKpqnuAL/JYFwCAPR58aQLV
   </data>
  </layer>
 </map>
