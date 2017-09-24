@@ -3,12 +3,12 @@
  <tileset firstgid="1" source="../../../Resources/Tilesets/tiles.tsx"/>
  <layer name="Map" width="50" height="50">
   <data encoding="base64" compression="zlib">
-   eJztlzEOwjAMRbNQKTsMMNP2Bu3ODcoRuP8hyEAly7hxSIXdSH94UklUya+Kv8MYQjjtoM/sDYnFiDFx/hMtekyJ7sPs7EFr4TWVfPv1nTH4etBaeE2ap7fHldQZExdG6X4U1iw96LnZyqGSfWmtxT6XiAfzqO3/18E8tP7P+Xt4SDOgJsc85kck9UiZs5VTt8z+umfpwfMol1P8LpXLMWuPR9DPeS2WHjX9W8LUiIeWxYOxB+9R2t+UO/utZZi1B62B9ujemeLp8WsP5zxiIx7aTLH+X1vrQevvybNX7mr9XZu5nbGHNJ/3sp45r/kxh+258Azf90jpfsjXrDwAAAAAAAAAAAAAAACglDd5FI7m
+   eJztlzEOwjAMRbNQKTsMMNPmBu05uP9lyEAkK3LjkICdSH94EsQg+VX1dxucc5cO1kJti7yUCJHrn5jRY48sHw5jD9pL3lPNtU//Cc7Wg/aS9yR5WnvcSZ8+csuorXvmTNOD3jdnOVRT585mnHMOP5hH6/zvg3lI8z/a/uB2QEuOWe8PLnPOcupRqKealYeUU/mzVCnHtD3odf01mh6tzyE1WWXpUbtPpCzelD1KzyGUZ/ZdyjBtD9oDndHenWLp8e0Mlzz8JB7STtF+r231oP2v5LNV7krz3Zq5i7IHt597Sfec1f44HL8XuBr3W+5MywMAAAAAAAAAAAAAAABqeQOw2I6S
   </data>
  </layer>
  <layer name="Objects" width="50" height="50">
   <data encoding="base64" compression="zlib">
-   eJztzrkNgEAMRcFtiRLovxpuyEgJ0HIsYIKZ0NaXXkpl5sI9QKnh4D/u3KY3Qrisjg6Aj/SZX3di3z4VAj9XRQfctEQHwEYTHQAAAAAAAMFWhTAJEA==
+   eJztzksOQFAQRUGWZAn2vxp/ZqYigpeHNqgaducmpyjyzJl7gFzDxX88uE1vhJCsjg6Aj/Qnv+7Gvn0qBH6u2h/KiIp0S3QAbDTRAQAAAAAAEGwFn5MJEQ==
   </data>
  </layer>
 </map>

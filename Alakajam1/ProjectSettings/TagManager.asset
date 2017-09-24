@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - LevelManager
+  - GameManager
+  - Invocation
+  - Rock
+  - Undefined
+  - JailDoor
+  - FloorButton
+  - Barrel
+  - Summon
+  - Fire
   layers:
   - Default
   - TransparentFX
