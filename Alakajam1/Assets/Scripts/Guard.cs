@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunpowderBarrel : MonoBehaviour {
+public class Guard : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -21,16 +21,8 @@ public class GunpowderBarrel : MonoBehaviour {
             Summon summon = coll.gameObject.GetComponent<Summon>();
             if (summon.GetType() == "Fire")
             {
-                GameObject newFloor = LevelManager.main.Instantiate(Resources.Load("Flames", typeof(GameObject)) as GameObject);
+                GameObject newFloor = LevelManager.main.Instantiate(Resources.Load("object_charred", typeof(GameObject)) as GameObject);
                 newFloor.transform.position = transform.position;
-
-                foreach (Transform child in LevelManager.main.GetContainer().transform)
-                {
-                    if (child.tag == "Barrel")
-                    {
-                        GameObject.Destroy(child.gameObject);
-                    }
-                }
 
                 Destroy(coll.gameObject);
                 Destroy(gameObject);

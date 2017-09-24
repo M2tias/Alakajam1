@@ -19,6 +19,8 @@ public class LevelManager : MonoBehaviour
     private Transform LevelContainer;
     [SerializeField]
     private Transform Player;
+    [SerializeField]
+    private GameObject Cat;
 
     private Level currentLevel;
 
@@ -118,7 +120,15 @@ public class LevelManager : MonoBehaviour
             { 27, Resources.Load("object_ditch_filled", typeof(GameObject)) as GameObject },
             { 43, Resources.Load("object_flame_left", typeof(GameObject)) as GameObject },
             { 44, Resources.Load("object_flame_middle", typeof(GameObject)) as GameObject },
-            { 45, Resources.Load("object_flame_right", typeof(GameObject)) as GameObject }
+            { 45, Resources.Load("object_flame_right", typeof(GameObject)) as GameObject },
+            { 74, Resources.Load("object_wall_breakable_top", typeof(GameObject)) as GameObject },
+            { 75, Resources.Load("object_wall_broken_top", typeof(GameObject)) as GameObject },
+            { 90, Resources.Load("object_wall_breakable_bottom", typeof(GameObject)) as GameObject },
+            { 91, Resources.Load("object_wall_broken_bottom", typeof(GameObject)) as GameObject },
+            { 57, Resources.Load("object_guard", typeof(GameObject)) as GameObject },
+            { 58, Resources.Load("object_charred", typeof(GameObject)) as GameObject },
+            { 65, Resources.Load("object_priest", typeof(GameObject)) as GameObject },
+            { 106, Resources.Load("object_stone", typeof(GameObject)) as GameObject }
         };
 
         //Debug.Log("fine");
@@ -131,6 +141,14 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentLevel != null && currentLevel.ID == "Overworld")
+        {
+            Cat.SetActive(true);
+        }
+        else
+        {
+            Cat.SetActive(false);
+        }
     }
 
     public GameObject Instantiate(GameObject obj)
@@ -212,7 +230,8 @@ public class Level
         GameObject doorButton = null; //either jail door or floor button, pair them together
         GameObject bars = null; //bars is set to this so jail door's left neighbour can be paired to it
 
-        List<string> file = System.IO.File.ReadAllLines("Assets/Maps/" + filename).ToList();
+        string map = Resources.Load<TextAsset>("Maps/" + filename.Substring(0, filename.IndexOf('.'))).text;
+        List<string> file = map.Replace("\r", "").Split(new char[] { '\n' }).ToList();//.ToList();
 
         List<GameObject> row = new List<GameObject>();
         bool map_flag = false;
@@ -251,6 +270,7 @@ public class Level
                         Debug.Log(part);
                     }
                     GameObject tile = LevelManager.main.Instantiate(LevelManager.tiles[Int32.Parse(part)]);
+                    tile.isStatic = true;
                     float xOffset = LevelManager.main.GetXOffset();
                     float yOffset = LevelManager.main.GetYOffset();
 
@@ -319,7 +339,7 @@ public class Level
                         {
                             GameObject tile = LevelManager.main.Instantiate(LevelManager.tiles[Int32.Parse(part)]);
                             SpriteRenderer r = tile.GetComponent<SpriteRenderer>();
-                            if (r != null) r.sortingOrder = 3;
+                            if (r != null) r.sortingOrder = 2;
                             float xOffset = LevelManager.main.GetXOffset();
                             float yOffset = LevelManager.main.GetYOffset();
 

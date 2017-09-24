@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4218883886027250}
   - component: {fileID: 212395634078948298}
+  - component: {fileID: 114280514126963906}
   - component: {fileID: 61221712503798422}
   - component: {fileID: 50820802503551808}
-  - component: {fileID: 114280514126963906}
   m_Layer: 0
   m_Name: object_wall_breakable_top
   m_TagString: Untagged
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83bb42bc82749f442ae857ff287f18e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dir: Top
 --- !u!212 &212395634078948298
 SpriteRenderer:
   m_ObjectHideFlags: 1

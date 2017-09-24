@@ -12,12 +12,5 @@ public class Flames : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        foreach (Transform child in LevelManager.main.GetContainer().transform)
-        {
-            if (child.tag == "Barrel")
-            {
-                GameObject.Destroy(child.gameObject);
-            }
-        }
     }
 }

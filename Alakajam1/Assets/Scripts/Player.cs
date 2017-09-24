@@ -176,6 +176,16 @@ public class Player : MonoBehaviour
             else if (GameManager.main.GetInvEarth())
             {
                 //f, e
+                GameObject prefab = Resources.Load("Bomb", typeof(GameObject)) as GameObject;
+                GameObject summon = LevelManager.main.Instantiate(prefab);
+                summon.transform.position = front();
+                Summon s = summon.GetComponent<Summon>();
+                s.SetDir(dir);
+                s.SetType("Bomb");
+                GameManager.main.SetInvFire(false);
+                GameManager.main.SetInvEarth(false);
+
+                StartCoroutine(DeleteLater(summon));
             }
             else
             {
